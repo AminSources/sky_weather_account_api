@@ -63,7 +63,8 @@ def register_user():
                 "id": len(userList) + 1,
                 "name": client_data["name"],
                 "email": client_data["email"],
-                "password": client_data["password"]
+                "password": client_data["password"],
+                "location": client_data["location"],
             }
             userList.append(new_user)
             return jsonify({"user": new_user}), 201
